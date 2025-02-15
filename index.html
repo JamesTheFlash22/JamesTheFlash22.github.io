@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruota della Fortuna</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruota della Fortuna</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ruota della Fortuna</h1>
-    <canvas id="wheelCanvas" width="350" height="350"></canvas>
+  <h1>Ruota della Fortuna</h1>
+  <canvas id="wheelCanvas" width="350" height="350"></canvas>
 
-    <div class="button-group">
-        <button id="spinButton" class="custom-button">Gira la Ruota</button>
-        <button id="showResultsButton" class="custom-button">Mostra Risultati</button>
-    </div>
+  <div class="button-group">
+    <button id="spinButton" class="custom-button btn-spin">Gira la Ruota</button>
+    <button id="showResultsButton" class="custom-button btn-show">Mostra Risultati</button>
+    <button id="openRemoveNumberPopup" class="custom-button btn-remove">Rimuovi un numero dalla ruota</button>
+  </div>
 
-    <div id="winnerPopup" class="popup">
-        <span id="winnerName"></span>
-        <button id="removeNameButton" class="popup-button">Rimuovi Nome</button>
-        <button id="closePopup" class="popup-button">Chiudi</button>
-    </div>
+  <!-- Popup per il numero estratto -->
+  <div id="winnerPopup" class="popup">
+    <span id="winnerNumber"></span>
+    <button id="removeWinnerNumberButton" class="custom-button btn-remove">Rimuovi Numero</button>
+    <button id="closePopup" class="custom-button">Chiudi</button>
+  </div>
 
-    <div id="resultsPopup" class="popup results-popup">
-        <h2>Risultati delle Estratti</h2>
-        <ul id="resultsList"></ul>
-        <button id="closeResultsPopup" class="popup-button">Chiudi</button>
-    </div>
+  <!-- Popup per i risultati degli estratti -->
+  <div id="resultsPopup" class="popup results-popup">
+    <h2>Numeri estratti:</h2>
+    <ul id="resultsList"></ul>
+    <button id="closeResultsPopup" class="custom-button">Chiudi</button>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Popup per rimuovere manualmente un numero dalla ruota -->
+  <div id="removeNumberPopup" class="popup">
+    <h2>Seleziona Numero da Rimuovere</h2>
+    <select id="numberSelect"></select>
+    <button id="confirmRemoveButton" class="custom-button btn-remove">Rimuovi</button>
+    <button id="closeRemovePopup" class="custom-button">Chiudi</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
